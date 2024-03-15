@@ -7,11 +7,24 @@ const usersGet = ( req, res = response ) => {
 }
 
 const usersPut =  ( req, res ) => {
-    res.json({ msg: 'put API - Controller' })
+
+    const id = req.params.id;
+
+    res.json({ 
+        msg: 'put API - Controller',
+        id
+    })
 }
 
 const usersPost = ( req, res ) => {
-    res.json({ msg: 'post API - Controller' })
+
+    const { name, age } = req.body;
+
+    res.json({
+        msg: 'post API - Controller', 
+        name, 
+        age
+    })
 }
 
 const usersDelete = ( req, res ) => {

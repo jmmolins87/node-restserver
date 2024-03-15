@@ -20,7 +20,10 @@ class Server {
     middlwares() {
 
         // Cors
-        this.app.use( cors() );
+        this.app.use( cors());
+
+        // Lectura y Parseo del body
+        this.app.use( express.json());
 
         // Directorio público
         this.app.use( express.static( 'public' ));
